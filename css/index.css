@@ -49,6 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
+    color:rgb(225, 239, 230);
 }
 
 html {
@@ -65,6 +66,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+
 }
 
 h1 {
@@ -73,10 +75,12 @@ h1 {
 
 h2 {
     font-size: 6rem;
+    padding: 5rem;
 }
 
 h3 {
     font-size: 5rem;
+    margin-top: ;
 }
 
 p, a {
@@ -91,7 +95,33 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
+header nav a:hover{
+    color: rgb(124, 86, 16);
+    transition: all;
+}
+    header div{
+        background-color: rgba(0, 4, 17, 0.5);
+
+    }
+header nav{
+    display: flex;
+    justify-content: center;
+    gap: 21rem;
+    
+}
+.icons{
+    font-size: 4rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 3.5rem;
+}
+.icons:hover{
+    color: rgb(198, 196, 196, 0.5);
+}
+
 
 /* spacers */
 .spacer {
@@ -99,9 +129,14 @@ header {
     height: 20vh;
     background-color: rgb(0, 4, 17);
 }
+.spacer2{
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(0, 4, 17);
+}
 .spacer-sm {
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     background-color: rgb(0, 4, 17);
 }
 
@@ -111,7 +146,15 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+
 }
+   .img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+   }
+
 
 /* about us section */
 .about {
@@ -122,6 +165,7 @@ header {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+
 }
 
 .about-container {
@@ -135,10 +179,25 @@ header {
 
 .about h2 {
     width: 100%;
+
+}
+.about h3{
+    margin-top: 5vh;
+}
+.about p{
+    margin-top: 2vh;
 }
 
 .about-container .text {
     width: 50%;
+}
+.aboutContainerText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 16vh;
 }
 
 /* contact us section */
@@ -192,20 +251,99 @@ header {
 footer {
     width: 100%;
     height: 15vh;
-    padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+}
+    footer nav {
+        display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10rem;
+    margin-bottom: 8rem;
+    margin-left: 13rem;
+
+
+
+    }
+    
+    
+
+footer nav a{
+    color: white;
+    font-size: 1.rem;
+    padding: 0 3rem;
+
+
+    }
+   footer nav a:hover{
+        transition: all;
+        transition-duration: 0.4ms;
+        color: rgb(124, 86, 16);
+    }
+
+    footer p{
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+        font-style: oblique;
+        display: flex;
+        justify-content: space-around;
+    }
+    form{
+        background-color: black;
+
+    }
+    
+    
+
+    form input{
+        font-size: 3rem;
+        color: black;
+    }
+    .footer-section{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 2rem;
+        margin-bottom: -5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+        
+
+.copyright{
+    text-align: end;
+    margin-right: 2rem;
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 14vh;
+    
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+
+   
+   
+
+
+    body {
+        width: 100%;
+    }
+    h2 {
+        padding: 3vh 0;
+    }
+    header nav{
+        gap: 2rem;
+        flex-direction: column;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
     }
-    
+    .img {
+        gap: 5rem;
+    }
     /* about us section */
 
     .about {
@@ -249,5 +387,60 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-}
+    .footer-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        
+     }
+ 
+ footer nav a {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     
+     }
+     footer nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+        margin: 2vh 0 3vh 0;
+       
+
+     }
+     form label {
+        display: flex;
+        flex-direction: column;
+     }
+        footer p {
+            margin-left: 0;
+        }
+        footer .copyright p {
+            margin-right: 0;
+            font-size: 1.5vh;
+            width: 40vh;
+            text-align: center;
+            margin-left: 14vh;
+        }
+     }
+   
+     /* margin-bottom
+     footer div{
+         text-align: center;
+     }
+ 
+     .copyright{
+         text-align: center;
+         padding-bottom: 2rem;
+     }
+ 
+ }
